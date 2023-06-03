@@ -43,3 +43,5 @@ console.log("h"*"h")
 
 let filtered = amazonStore.filter(element=>element.price<50)
 console.log(filtered)
+{const x = 1}
+const x = 3

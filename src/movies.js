@@ -96,7 +96,7 @@ function turnHoursToMinutes(moviesArray) {
   const newMoviesArray = moviesArray.map(movie => {
     const newMovie = { ...movie };
     const duration = newMovie.duration;
-    const durationParts = duration.split(' ');
+    const durationParts = duration.split(' '); //transforma em array!!!
     let totalMinutes = 0;
 
     for (const part of durationParts) {
@@ -124,5 +124,23 @@ function bestYearAvg(moviesArray) {
   const orderedByYear = orderByYear(moviesArray)
   
   const best = scoresAverage(orderedByYear)
+  return scoresAverage
   //O melhor ano foi <YEAR> com uma pontuação média de <RATE>
 }
+
+console.log(bestYearAvg(movies.year))
+
+
+// Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
+/*function orderAlphabetically(moviesArray) {
+  const moviesClone = JSON.parse(JSON.stringify(moviesArray));
+  const sortedMovies = moviesClone.sort((a, b) => {
+      if (a.title > b.title) {
+          return 1
+
+      } else {
+          return -1
+      }
+  })
+  const moviesTitles = sortedMovies.slice(0, 20).map((m) => { return m.title })
+  return moviesTitles;*/
